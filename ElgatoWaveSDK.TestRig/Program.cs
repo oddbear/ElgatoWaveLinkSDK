@@ -9,7 +9,7 @@ namespace ElgatoWaveSDK.TestRig
     {
         public static async Task Main()
         {
-            ElgatoWaveClient client = new ();
+            ElgatoWaveClient client = new ElgatoWaveClient();
             client.MicStateChanged += (sender, state) =>
             {
                 Console.WriteLine($"\nUpdate | Mic Connected: {state.IsMicrophoneConnected}");
