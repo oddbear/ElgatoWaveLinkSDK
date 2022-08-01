@@ -264,7 +264,7 @@ namespace ElgatoWaveSDK
                     var reply = _responseCache[baseObject.Id];
                     _responseCache.Remove(reply.Id);
 
-                    return JsonConvert.DeserializeObject<OutT>(reply.Result);
+                    return JsonConvert.DeserializeObject<OutT>(reply.Result?.ToString());
                 }
             }
 
