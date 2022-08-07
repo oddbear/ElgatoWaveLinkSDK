@@ -367,7 +367,7 @@ namespace ElgatoWaveSDK
                                     }
                                     break;
                                 case "channelsChanged":
-                                    obj = JsonConvert.DeserializeObject<List<ChannelInfo>>(baseObject.Obj?.ToString());
+                                    obj = JsonConvert.DeserializeObject<List<ChannelInfo>>(baseObject.Obj?["channels"]?.ToString());
                                     if (obj != null)
                                     {
                                         ChannelsChanged?.Invoke(this, obj as List<ChannelInfo> ?? throw new InvalidOperationException());
